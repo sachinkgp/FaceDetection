@@ -1,9 +1,16 @@
 #importing libraries needed
 import cv2 
+
+#creating a face cascade using haarcascade
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+
+#creating a face cascade using haarcascade
 eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
+
+#Capture a video using the machines camera and openCV library
 cap = cv2.VideoCapture(0)
 
+#main function
 while 1:
   ret, img = cap.read()
   gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
